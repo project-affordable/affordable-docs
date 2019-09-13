@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "affordable-docs",
+  "public": true,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/next"
+    }
+  ]
+}
