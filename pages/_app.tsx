@@ -1,7 +1,6 @@
 import App from 'next/app';
 import React from 'react';
 
-/* eslint-disable class-methods-use-this */
 class Affordable extends App {
   render() {
     const { Component, pageProps } = this.props;
