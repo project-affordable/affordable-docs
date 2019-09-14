@@ -23,6 +23,6 @@
     "typeRoots": ["./node_modules/@types"],
     "lib": ["dom", "dom.iterable", "esnext.array"]
   },
-  "include": ["next-env.d.ts"],
+  "include": ["next-env.d.ts", "pages/**/*.ts", "pages/**/*.tsx"],
   "exclude": ["node_modules"]
 }
