@@ -74,7 +74,7 @@ export const HomeFooter = () => {
               <Link
                 color='inherit'
                 variant='body2'
-                href='https://github.com/gurkerl83/millipede-docs'
+                href='https://github.com/project-affordable/affordable-docs'
               >
                 GitHub
               </Link>
@@ -114,7 +114,7 @@ export const HomeFooter = () => {
         })}
         {' Copyright © '}
         {new Date().getFullYear()}
-        {' Project Millipede '}
+        {' Project Affordable '}
       </Typography>
     </Container>
   );

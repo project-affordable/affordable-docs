@@ -3,7 +3,6 @@ import React from 'react';
 import { isMobileOnly } from 'react-device-detect';
 
 import Breadcrumbs from './common/breadcrumbs';
-import Editpage from './Editpage';
 
 export const useStyles = makeStyles((_theme: Theme) =>
   createStyles({
@@ -16,21 +15,16 @@ export const useStyles = makeStyles((_theme: Theme) =>
   })
 );
 
-interface MarkdownDocsProps {
+export interface MarkdownDocsProps {
   markdownLocation?: string;
 }
 
-const SOURCE_CODE_ROOT_URL = 'https://github.com/gurkerl83/millipede-docs/blob/master/docs/src';
-
-export const AppContentHeader = ({ markdownLocation }: MarkdownDocsProps) => {
+export const AppContentHeader = () => {
   const classes = useStyles({});
 
   return !isMobileOnly ? (
     <div className={classes.headerRow}>
       <Breadcrumbs />
-      {markdownLocation ? (
-        <Editpage markdownLocation={markdownLocation} sourceCodeRootUrl={SOURCE_CODE_ROOT_URL} />
-      ) : null}
     </div>
   ) : null;
 };

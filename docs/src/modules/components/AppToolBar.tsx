@@ -113,7 +113,7 @@ const AppToolBar = ({ isDrawerOpen, handleDrawerOpen }: AppToolBarProps) => {
           edge='end'
           component='a'
           color='inherit'
-          href='https://github.com/gurkerl83/millipede-docs'
+          href='https://github.com/gurkerl83/affordable-docs'
           aria-label={t('github')}
           data-ga-event-category='AppBar'
           data-ga-event-action='github'

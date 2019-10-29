@@ -51,9 +51,12 @@ export interface OverviewStep {
 }
 
 export interface OverviewProps {
+  scenario?: string;
+  category?: string;
   title?: string;
   description?: string;
-  letter: Array<string>;
-  link: string;
-  steps: Array<OverviewStep>;
+  letter?: Array<string>;
+  link?: string;
+  steps?: Array<OverviewStep>;
+  icon?: string;
 }

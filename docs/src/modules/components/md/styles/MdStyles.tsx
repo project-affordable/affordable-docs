@@ -55,12 +55,12 @@ export const useMdStyles = (theme: Theme) =>
         margin: '40px 0 16px'
       },
       '& h3': {
-        ...theme.typography.h5,
-        margin: '40px 0 16px'
+        ...theme.typography.h5
+        // margin: '40px 0 16px'
       },
       '& h4': {
-        ...theme.typography.h6,
-        margin: '32px 0 16px'
+        ...theme.typography.h6
+        // margin: '32px 0 16px'
       },
       '& h5': {
         ...theme.typography.subtitle2,

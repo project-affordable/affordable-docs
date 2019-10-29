@@ -5,6 +5,7 @@ import React from 'react';
 import AppFrame from '../docs/src/modules/components/AppFrame';
 import Head from '../docs/src/modules/components/Head';
 import HomeFooter from '../docs/src/modules/components/HomeFooter';
+import { useMdStyles } from '../docs/src/modules/components/md/styles/MdStyles';
 import { useTranslation } from '../i18n';
 import GuttersGrid from '../src/components/layout/grid/GuttersGrid';
 
@@ -29,6 +30,21 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingTop: 64,
       color: theme.palette.primary.main
     },
+    // content: {
+    //   display: 'flex',
+    //   flexDirection: 'column',
+    //   alignItems: 'center',
+    //   textAlign: 'center',
+    //   paddingTop: theme.spacing(4),
+    //   paddingBottom: theme.spacing(8),
+    //   [theme.breakpoints.up('md')]: {
+    //     paddingTop: theme.spacing(20),
+    //     paddingBottom: theme.spacing(20),
+    //     flexDirection: 'row',
+    //     alignItems: 'flex-start',
+    //     textAlign: 'left'
+    //   }
+    // },
     content: {
       display: 'flex',
       flexDirection: 'column',
@@ -39,14 +55,14 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.up('md')]: {
         paddingTop: theme.spacing(20),
         paddingBottom: theme.spacing(20),
-        flexDirection: 'row',
-        alignItems: 'flex-start',
+        // flexDirection: 'row',
+        // alignItems: 'flex-start',
         textAlign: 'left'
       }
     },
     title: {
       marginLeft: -12,
-      whiteSpace: 'nowrap',
+      // whiteSpace: 'nowrap',
       letterSpacing: '.7rem',
       textIndent: '.7rem',
       fontWeight: theme.typography.fontWeightLight,
@@ -71,8 +87,17 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+const useStylesRoot = makeStyles((theme: Theme) => {
+  return {
+    ...useMdStyles(theme)
+    // ...createStyles({
+    // })
+  };
+});
+
 const Index = () => {
   const classes = useStyles({});
+  const rootClasses = useStylesRoot({});
   const { t } = useTranslation();
 
   return (
@@ -81,21 +106,27 @@ const Index = () => {
         <Head />
         <div className={classes.hero}>
           <Container maxWidth='md' className={classes.content}>
-            {/* <img
-              src='/static/images/material-ui-logo.svg'
-              alt='Material-UI Logo'
-              className={classes.logo}
-            /> */}
             <div className={classes.header}>
               <Typography
                 variant='h3'
-                component='h1'
+                // component='h1'
                 color='inherit'
                 gutterBottom
                 className={classes.title}
               >
                 {t('application-title')}
               </Typography>
+              <Typography
+                variant='h4'
+                // component='h1'
+                color='inherit'
+                gutterBottom
+                className={classes.title}
+              >
+                {t('application-subTitle')}
+              </Typography>
+            </div>
+            <div className={rootClasses.root}>
               <Divider />
               <GuttersGrid />
               <HomeFooter />

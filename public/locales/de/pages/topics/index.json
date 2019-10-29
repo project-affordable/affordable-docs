@@ -1,14 +1,71 @@
 {
   "topics": [
     {
-      "title": "Privacy Enhancing Technology / PET",
-      "description": "Etablierung von Vertrauen in unsicheren Umgegebugen",
-      "steps": [{ "label": "Schritt - 1" }, { "label": "Schritt - 2" }, { "label": "Schritt - 3" }]
+      "scenario": "general",
+      "category": "recommendation",
+      "title": "Wieviel kannst du dir leisten?",
+      "description": "ohne dein persönliches Ausgabenlimit zu überschreiten",
+      "link": "/affordable",
+      "icon": "star"
     },
     {
-      "title": "Personal Intrusion Detection and Prevention / PID-P",
-      "description": "Ansatz zur Eindämmung von Falschinformation",
-      "steps": [{ "label": "Schritt - 4" }, { "label": "Schritt - 5" }, { "label": "Schritt - 6" }]
+      "scenario": "loan",
+      "category": "validation",
+      "title": "Validierung von Kreditentscheidungen",
+      "description": "Überprüfen Sie die Kreditentscheidungen Ihrer Bank durch eine unabhängige Kalkulation.",
+      "link": "/validation/credit",
+      "icon": "star"
+    },
+    {
+      "scenario": "loan",
+      "category": "validation",
+      "title": "Bestimmung der zugewiesenen Bonität",
+      "description": "Unabhängige Bestimmung der einem Darlehensnehmer zugewiesene Bonität",
+      "link": "/validation/rating",
+      "icon": "star"
+    },
+    {
+      "scenario": "loan",
+      "category": "risk",
+      "title": "Risikoabschätzung zusätzlicher Kreditverpflichtungen",
+      "description": "Berechnung des eigenen Risikos, Kredite nicht zurückzahlen zu können",
+      "link": "/risk/outage",
+      "icon": "star"
+    },
+    {
+      "scenario": "loan",
+      "category": "risk",
+      "title": "Simulation künftiger Szenarien",
+      "description": "Simulation künftiger Szenarien",
+      "link": "/risk/simulation",
+      "icon": "star"
+    },
+    {
+      "scenario": "loan",
+      "category": "risk",
+      "title": "Gabe von Handlungsempfehlungen",
+      "description": "Bestimmung von Handlungsempfehlungen eines gegebenen Kreditszenarios",
+      "link": "/risk/recommendation",
+      "icon": "star"
+    },
+    {
+      "scenario": "general",
+      "category": "overview",
+      "title": "Überblick und Status von Kreditverbindlichkeiten",
+      "description": "Darstellung von Verbindlichkeiten über einen kurz- und langfristigen Zeitraum",
+      "link": "/tracking",
+      "icon": "star"
     }
-  ]
+  ],
+  "scenarios": {
+    "general": "Für jedermann",
+    "loan": "Für Kreditnehmer"
+  },
+  "categories": {
+    "validation": "Validierung",
+    "risk": "Risiko",
+    "tracking": "Übersicht",
+    "recommendation": "Empfehlung",
+    "overview": "Überblick"
+  }
 }
