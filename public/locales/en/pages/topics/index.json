@@ -1,14 +1,71 @@
 {
   "topics": [
     {
-      "title": "Privacy Enhancing Technology / PET",
-      "description": "Make untrusted envrionments trusted",
-      "steps": [{ "label": "Step - 1" }, { "label": "Step - 2" }, { "label": "Step - 3" }]
+      "scenario": "general",
+      "category": "recommendation",
+      "title": "How much can you afford?",
+      "description": "without exceeding your personal spending limit",
+      "link": "/affordable",
+      "icon": "star"
     },
     {
-      "title": "Personal Intrusion Detection and Prevention / PID-P",
-      "description": "Approach to fight fake news",
-      "steps": [{ "label": "Step - 4" }, { "label": "Step - 5" }, { "label": "Step - 6" }]
+      "scenario": "loan",
+      "category": "validation",
+      "title": "Validation of loan decisions",
+      "description": "Double check loan decisions from your bank through an independent calculation",
+      "link": "/validation/credit",
+      "icon": "star"
+    },
+    {
+      "scenario": "loan",
+      "category": "validation",
+      "title": "Determination of the assigned rating",
+      "description": "Independent determination of the creditworthiness assigned to a borrower",
+      "link": "/validation/rating",
+      "icon": "star"
+    },
+    {
+      "scenario": "loan",
+      "category": "risk",
+      "title": "Risk outage",
+      "description": "Calculation of the own risk of not being able to repay loans",
+      "link": "/risk/outage",
+      "icon": "star"
+    },
+    {
+      "scenario": "loan",
+      "category": "risk",
+      "title": "Recommendations",
+      "description": "Determination of recommendations for action for given credit scenarios",
+      "link": "/risk/recommendation",
+      "icon": "star"
+    },
+    {
+      "scenario": "loan",
+      "category": "risk",
+      "title": "Simulation of future scenarios",
+      "description": "Simulation of future scenarios",
+      "link": "/risk/simulation",
+      "icon": "star"
+    },
+    {
+      "scenario": "general",
+      "category": "overview",
+      "title": "Overview and status of loan liabilities",
+      "description": "Representation of liabilities over a short and long-term period.",
+      "link": "/tracking",
+      "icon": "star"
     }
-  ]
+  ],
+  "scenarios": {
+    "general": "For anyone",
+    "loan": "For loan taker"
+  },
+  "categories": {
+    "validation": "Validation",
+    "risk": "Risk",
+    "tracking": "Overview",
+    "recommendation": "Recommendation",
+    "overview": "Overview"
+  }
 }

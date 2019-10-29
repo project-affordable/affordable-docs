@@ -13,41 +13,41 @@ export const loadPages = (pathname: string, currentPages: Array<Page>) => {
     return [];
   }
 
-  if (
-    pagesPET.filter(link => {
-      return _.some([link, ...(link.children || [])], linkIncludesText);
-    }).length > 0
-  ) {
-    return [
-      ...pagesCommon,
-      ...pagesRethinkSecurity,
-      ...pagesPET,
-      ...pagesPerspective,
-      ...pagesDiscoverMore
-    ];
-  }
+  // if (
+  //   pagesPET.filter(link => {
+  //     return _.some([link, ...(link.children || [])], linkIncludesText);
+  //   }).length > 0
+  // ) {
+  //   return [
+  //     ...pagesCommon,
+  //     ...pagesRethinkSecurity,
+  //     ...pagesPET,
+  //     ...pagesPerspective,
+  //     ...pagesDiscoverMore
+  //   ];
+  // }
 
-  if (
-    pagesPIDP.filter(link => {
-      return _.some([link, ...(link.children || [])], linkIncludesText);
-    }).length > 0
-  ) {
-    return [
-      ...pagesCommon,
-      ...pagesRethinkSecurity,
-      ...pagesPIDP,
-      ...pagesPerspective,
-      ...pagesDiscoverMore
-    ];
-  }
+  // if (
+  //   pagesPIDP.filter(link => {
+  //     return _.some([link, ...(link.children || [])], linkIncludesText);
+  //   }).length > 0
+  // ) {
+  //   return [
+  //     ...pagesCommon,
+  //     ...pagesRethinkSecurity,
+  //     ...pagesPIDP,
+  //     ...pagesPerspective,
+  //     ...pagesDiscoverMore
+  //   ];
+  // }
 
-  if (
-    pagesRethinkSecurity.filter(link => {
-      return _.some([link, ...(link.children || [])], linkIncludesText);
-    }).length > 0
-  ) {
-    return [...currentPages];
-  }
+  // if (
+  //   pagesRethinkSecurity.filter(link => {
+  //     return _.some([link, ...(link.children || [])], linkIncludesText);
+  //   }).length > 0
+  // ) {
+  //   return [...currentPages];
+  // }
 
   if (
     pagesDiscoverMore.filter(link => {
@@ -57,40 +57,114 @@ export const loadPages = (pathname: string, currentPages: Array<Page>) => {
     return [...currentPages];
   }
 
-  if (
-    pagesPerspective.filter(link => {
-      return _.some([link, ...(link.children || [])], linkIncludesText);
-    }).length > 0
-  ) {
-    return [...currentPages];
-  }
+  // if (
+  //   pagesPerspective.filter(link => {
+  //     return _.some([link, ...(link.children || [])], linkIncludesText);
+  //   }).length > 0
+  // ) {
+  //   return [...currentPages];
+  // }
+
+  // if (
+  //   pagesCommon.filter(link => {
+  //     return _.some([link, ...(link.children || [])], linkIncludesText);
+  //   }).length > 0
+  // ) {
+  //   return [...currentPages];
+  // }
+
+  // if (
+  //   pagesCommon.filter(link => {
+  //     return _.some([link, ...(link.children || [])], linkIncludesText);
+  //   }).length > 0
+  // ) {
+  //   return [...currentPages];
+  // }
 
   if (
     pagesCommon.filter(link => {
       return _.some([link, ...(link.children || [])], linkIncludesText);
     }).length > 0
   ) {
-    return [...currentPages];
+    return [...pagesCommon];
   }
 };
 
+// export const pagesCommon: Array<Page> = [
+//   {
+//     pathname: '/guides',
+//     icon: 'star',
+//     highlight: true,
+//     children: [
+//       {
+//         pathname: '/guides/landing',
+//         icon: 'star',
+//         highlight: true
+//       },
+//       {
+//         pathname: '/guides/api',
+//         icon: 'star',
+//         highlight: true
+//       }
+//     ]
+//   },
+//   {
+//     pathname: '/',
+//     displayNav: false
+//   }
+// ];
+
 export const pagesCommon: Array<Page> = [
   {
-    pathname: '/guides',
+    pathname: '/affordable',
+    icon: 'star',
+    highlight: true,
+    children: []
+  },
+  {
+    pathname: '/risk',
     icon: 'star',
     highlight: true,
     children: [
       {
-        pathname: '/guides/landing',
+        pathname: '/risk/outage',
         icon: 'star',
         highlight: true
       },
       {
-        pathname: '/guides/api',
+        pathname: '/risk/recommendation',
+        icon: 'star',
+        highlight: true
+      },
+      {
+        pathname: '/risk/simulation',
         icon: 'star',
         highlight: true
       }
     ]
+  },
+  {
+    pathname: '/validation',
+    icon: 'star',
+    highlight: true,
+    children: [
+      {
+        pathname: '/validation/credit',
+        icon: 'star',
+        highlight: true
+      },
+      {
+        pathname: '/validation/rating',
+        icon: 'star',
+        highlight: true
+      }
+    ]
+  },
+  {
+    pathname: '/tracking',
+    icon: 'star',
+    highlight: true,
+    children: []
   },
   {
     pathname: '/',

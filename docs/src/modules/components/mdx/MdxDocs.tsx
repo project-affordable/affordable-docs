@@ -36,7 +36,7 @@ export const MdxDocs = (props: MarkdownDocsProps) => {
   return (
     <AppFrame>
       {/* <Head
-        title={`${headers.title || getTitle(markdown)} - Project Millipede`}
+        title={`${headers.title || getTitle(markdown)} - Project Affordable`}
         description={headers.description || getDescription(markdown)}
       /> */}
       <Head />
