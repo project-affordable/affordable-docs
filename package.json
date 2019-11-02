@@ -27,7 +27,8 @@
     "start": "npm run loader:build && npm run app:build && npm run next:build && npm run next:start",
     "now-build": "npm run loader:build && npm run app:build && npm run next:build",
     "clean": "rm -rf dist/ .next/",
-    "format:mdx": "prettier --parser mdx --print-width 80 --prose-wrap always --write \"docs/src/pages/**/*.mdx\""
+    "format:mdx": "prettier --parser mdx --print-width 80 --prose-wrap always --write \"docs/src/pages/**/*.mdx\"",
+    "sitemap": "node sitemap-generator"
   },
   "main": "index.js",
   "dependencies": {
@@ -56,6 +57,7 @@
     "mdast-util-toc": "^4.2.0",
     "next": "^9.1.3-canary.1",
     "next-i18next-serverless": "^1.1.43",
+    "nextjs-sitemap-generator": "^0.3.2",
     "polished": "^3.4.2",
     "react": "^16.11.0",
     "react-device-detect": "^1.9.10",
