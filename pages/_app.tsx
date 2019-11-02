@@ -1,6 +1,8 @@
+import * as Sentry from '@sentry/browser';
 import { HouxProvider } from 'houx';
 import App from 'next/app';
 import React from 'react';
+import ReactGA from 'react-ga';
 
 import AppWrapper from '../docs/src/modules/components/AppWrapper';
 import reducers from '../docs/src/modules/redux/reducers';
@@ -19,6 +21,8 @@ class MillipedeApp extends App {
     if (jssStyles) {
       jssStyles.parentNode.removeChild(jssStyles);
     }
+    ReactGA.initialize('UA-151367183-1');
+    Sentry.init({ dsn: 'https://1dffd164c01e4b4fb0ab75ae861b80bc@sentry.io/1805394' });
   }
 
   render() {
